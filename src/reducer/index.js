@@ -1,9 +1,7 @@
-const initialState = {
+import { combineReducers } from 'redux'
 
-}
+import authReducer from './authReducer'
 
-const reducer = (state = initialState, action) => {
-    return state
-}
-
-export default reducer
+export default combineReducers({
+    authReducer
+})
