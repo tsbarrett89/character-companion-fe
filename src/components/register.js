@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { sendRegister } from '../actions/auth'
 
-const registerForm = () => {
+const RegisterForm = () => {
     const { register, handleSubmit, errors, watch } = useForm()
     const dispatch = useDispatch()
 
@@ -21,7 +21,7 @@ const registerForm = () => {
                 />
                 {errors.username && <p>Required. Must be at least 3 characters long.</p>}
             </label>
-            <label>
+            <label>password
                 <input
                     name="password"
                     type="password"
@@ -36,4 +36,4 @@ const registerForm = () => {
     )
 }
 
-export default registerForm
+export default RegisterForm
