@@ -15,7 +15,7 @@ export const sendRegister = creds => dispatch => {
         .catch(err => dispatch({ type: REGISTER_FAILURE, payload: err.response }))
 }
 
-export const login = creds => dispatch => {
+export const sendLogin = creds => dispatch => {
     dispatch({ type: LOGIN_START })
     axios
         .post('http://localhost:5000/auth/login', creds)
