@@ -19,16 +19,16 @@ const RegisterForm = () => {
                     name="username"
                     ref={register({ required: true, minLength: 3 })}
                 />
-                {errors.username && <p>Required. Must be at least 3 characters long.</p>}
             </label>
+            {errors.username && "Required. Must be at least 3 characters long."}
             <label>password
                 <input
                     name="password"
                     type="password"
                     ref={register({ required: true, minLength: 3 })}
                 />
-                {errors.password && <p>Required. Must be at least 3 characters long.</p>}
             </label>
+            {errors.password && "Required. Must be at least 3 characters long."}
             <button 
                 type="submit"
             >Register</button>
