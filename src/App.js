@@ -1,14 +1,12 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
-import Register from './components/Register'
-import Login from './components/Login'
+import SignIn from './components/signOn/SignIn'
 
 function App() {
   return (
     <div>
-      <Register />
-      <Login />
+      <SignIn />
     </div>
   );
 }

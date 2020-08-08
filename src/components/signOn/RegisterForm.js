@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { sendRegister } from '../actions/auth'
+import { sendRegister } from '../../actions/auth'
 
 const RegisterForm = () => {
     const { register, handleSubmit, errors, watch } = useForm()
