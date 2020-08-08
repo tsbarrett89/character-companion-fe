@@ -1,15 +1,18 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useSelector, useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 
 import { sendLogin } from '../../actions/auth'
 
 const LoginForm = () => {
     const { register, handleSubmit, errors, watch } = useForm()
     const dispatch = useDispatch()
+    const history = useHistory()
 
     function submitRegistration(values){
         dispatch(sendLogin(values))
+        history.push('/character-list')
     }
 
     return (
