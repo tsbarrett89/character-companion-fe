@@ -9,8 +9,13 @@ export const fetchCharacters = user_id => dispatch => {
     axios
         .get(`http://localhost:5000/characters/all/${user_id}`)
         .then(res => {
-            console.log(res.data)
-            dispatch({ type: FETCH_CHARACTERS_SUCCESS, payload: res.data })
+            res.data.forEach(character => {
+                axios.get(`http://localhost:5000/class/classes/${character.id}`)
+                    .then(response => {
+                        dispatch({ type: FETCH_CHARACTERS_SUCCESS, payload: {...character, class: response.data }})
+                    })
+                    .catch(err => console.log(err.response))
+            })
         })
         .catch(err => dispatch({ type: FETCH_CHARACTERS_FAILURE, payload: err.response }))
 }
