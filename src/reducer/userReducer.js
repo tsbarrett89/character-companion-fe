@@ -21,7 +21,7 @@ const reducer = (state = initialState, action) => {
             console.log(action.payload)
             return ({
                 ...state,
-                characters: action.payload,
+                characters: [...state.characters, action.payload],
                 isLoading: false
             })
         case FETCH_CHARACTERS_FAILURE:
