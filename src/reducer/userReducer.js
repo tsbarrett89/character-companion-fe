@@ -18,6 +18,7 @@ const reducer = (state = initialState, action) => {
                 isLoading: true
             })
         case FETCH_CHARACTERS_SUCCESS:
+            console.log(action.payload)
             return ({
                 ...state,
                 characters: action.payload,
