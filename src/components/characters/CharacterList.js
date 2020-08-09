@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { fetchCharacters } from '../../actions/users'
 
+import CharacterCard from './CharacterCard'
+
 const CharacterList = () => {
     const dispatch = useDispatch()
     const characters = useSelector(state => state.userReducer.characters)
@@ -16,7 +18,7 @@ const CharacterList = () => {
 
     return (
         <div>
-            {characters.map(character => <p>{character.name}</p>)}
+            {characters.map(character => <CharacterCard key={character.id} character={character} />)}
         </div>
     )
 }
