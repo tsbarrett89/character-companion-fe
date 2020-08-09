@@ -8,9 +8,11 @@ const CharacterList = () => {
     const characters = useSelector(state => state.userReducer.characters)
     const currentUser = useSelector(state => state.authReducer.user_id)
 
+    console.log(currentUser)
+
     useEffect(() => {
         dispatch(fetchCharacters(currentUser))
-    }, [])
+    }, [currentUser])
 
     return (
         <div>
