@@ -9,6 +9,7 @@ import {
 
 const initialState = {
     user_id: 0,
+    username: '',
     isLoading: false,
     error: null
 }
@@ -24,6 +25,7 @@ const reducer = (state = initialState, action) => {
             return ({
                 ...state,
                 user_id: action.payload.user_id,
+                username: action.payload.username,
                 isLoading: false
             })
         case REGISTER_FAILURE:
@@ -41,6 +43,7 @@ const reducer = (state = initialState, action) => {
             return ({
                 ...state,
                 user_id: action.payload.user_id,
+                username: action.payload.username,
                 isLoading: false
             })
         case LOGIN_FAILURE:
