@@ -10,6 +10,10 @@ const SignIn = () => {
 
     return (
         <div className="signIn">
+            <span className="tabs">
+                <div id={registered && "active"}>Log In</div>
+                <div id={!registered && "active"}>Register</div>
+            </span>
             {registered ? <Login /> : <Register />}
             {registered ? <p onClick={() => setRegistered(!registered)}>Not yet a user? Register here</p> :
             <p onClick={() => setRegistered(!registered)}>Already registered? Login here</p>}
