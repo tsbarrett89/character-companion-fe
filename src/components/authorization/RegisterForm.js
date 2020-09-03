@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
+import './authForm.scss'
+
 import { sendRegister } from '../../actions/auth'
 
 const RegisterForm = () => {
