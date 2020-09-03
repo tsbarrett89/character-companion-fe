@@ -5,9 +5,10 @@ import { useDispatch } from 'react-redux'
 import { logOut } from '../../actions/auth'
 
 const LogOutButton = () => {
+    const dispatch = useDispatch()
 
     return (
-        <NavLink onClick={logOut} to='/'>Log Out</NavLink>
+        <NavLink onClick={() => dispatch(logOut())} to='/'>Log Out</NavLink>
     )
 }
 
