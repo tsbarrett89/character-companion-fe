@@ -8,15 +8,19 @@ import Register from './RegisterForm'
 const SignIn = () => {
     const [registered, setRegistered] = useState(true)
 
+    const toggleRegister = () => {
+        setRegistered(!registered)
+    }
+
     return (
         <div className="signIn">
             <span className="tabs">
-                <div id={registered && "active"}>Log In</div>
-                <div id={!registered && "active"}>Register</div>
+                <div id={registered && "active"} onClick={toggleRegister}>Log In</div>
+                <div id={!registered && "active"} onClick={toggleRegister}>Register</div>
             </span>
             {registered ? <Login /> : <Register />}
-            {registered ? <p onClick={() => setRegistered(!registered)}>Not yet a user? Register here</p> :
-            <p onClick={() => setRegistered(!registered)}>Already registered? Login here</p>}
+            {registered ? <p onClick={toggleRegister}>Not yet a user? Register here</p> :
+            <p onClick={toggleRegister}>Already registered? Login here</p>}
         </div>
     )
 }
