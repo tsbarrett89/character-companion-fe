@@ -15,8 +15,8 @@ const SignIn = () => {
     return (
         <div className="signIn">
             <span className="tabs">
-                <div id={registered && "active"} onClick={toggleRegister}>Log In</div>
-                <div id={!registered && "active"} onClick={toggleRegister}>Register</div>
+                <div id={!registered ? "none" : "active"} onClick={toggleRegister}>Log In</div>
+                <div id={registered ? "none" : "active"} onClick={toggleRegister}>Register</div>
             </span>
             {registered ? <Login /> : <Register />}
             {/* {registered ? <p onClick={toggleRegister}>Not yet a user? Register here</p> :
