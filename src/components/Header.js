@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 import './header.scss'
 
-import SignOnButton from './authorization/SignOnButton'
+import SignInButton from './authorization/SignInButton'
 import LogOutButton from './authorization/LogOutButton'
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
         <header>
             <h1>Character Companion</h1>
             {username && <h3>{username}</h3>}
-            {username ? <LogOutButton /> : <SignOnButton />}
+            {username ? <LogOutButton /> : <SignInButton />}
         </header>
     )
 }
