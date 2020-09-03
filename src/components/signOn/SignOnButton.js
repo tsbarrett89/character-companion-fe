@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const SignOnButton = () => {
     return (
-        <button>Sign On</button>
+        <NavLink to='/login'>Sign On</NavLink>
     )
 }
 
