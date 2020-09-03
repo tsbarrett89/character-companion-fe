@@ -8,7 +8,7 @@ import './authForm.scss'
 import { sendRegister } from '../../actions/auth'
 
 const RegisterForm = () => {
-    const { register, handleSubmit, errors, watch } = useForm()
+    const { register, handleSubmit, errors } = useForm()
     const dispatch = useDispatch()
     const history = useHistory()
 
@@ -18,7 +18,7 @@ const RegisterForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(submitRegistration)}>
+        <form className="authForm" onSubmit={handleSubmit(submitRegistration)}>
             <label>username
                 <input
                     name="username"
