@@ -4,7 +4,8 @@ import {
     REGISTER_FAILURE,
     LOGIN_START,
     LOGIN_SUCCESS,
-    LOGIN_FAILURE
+    LOGIN_FAILURE,
+    LOGOUT
 } from '../actions/auth'
 
 const initialState = {
@@ -52,6 +53,9 @@ const reducer = (state = initialState, action) => {
                 isLoading: false,
                 error: action.payload
             })
+        case LOGOUT:
+            console.log('logout')
+            return (initialState)
     }
     return state
 }
