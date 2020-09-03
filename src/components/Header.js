@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 
 import SignOnButton from './signOn/SignOnButton'
 
@@ -9,7 +10,8 @@ const Header = () => {
     return (
         <header>
             <h1>Character Companion</h1>
-            {username ? <h3>{username}</h3> : <SignOnButton />}
+            {username && <h3>{username}</h3>}
+            {username ? <NavLink to='/login'>Log In / Register</NavLink> : <SignOnButton />}
         </header>
     )
 }
