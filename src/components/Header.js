@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+
+import './header.scss'
 
 import SignOnButton from './authorization/SignOnButton'
 import LogOutButton from './authorization/LogOutButton'
