@@ -12,8 +12,7 @@ const Header = () => {
     return (
         <header>
             <h1>Character Companion</h1>
-            {username && <h3>{username}</h3>}
-            {username ? <LogOutButton /> : <SignInButton />}
+            {username ? <a>{username}</a> : <SignInButton />}
         </header>
     )
 }
