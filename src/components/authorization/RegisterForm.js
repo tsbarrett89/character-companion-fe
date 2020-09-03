@@ -19,13 +19,13 @@ const RegisterForm = () => {
 
     return (
         <form className="authForm" onSubmit={handleSubmit(submitRegistration)}>
-            <label htmlFor="username">username</label>
+            <label htmlFor="username">Username</label>
             <input
                 name="username"
                 ref={register({ required: true, minLength: 3 })}
             />
             {errors.username && "Required. Must be at least 3 characters long."}
-            <label htmlFor="password">password</label>
+            <label htmlFor="password">Password</label>
             <input
                 name="password"
                 type="password"
