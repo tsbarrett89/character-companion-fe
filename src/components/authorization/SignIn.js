@@ -19,8 +19,8 @@ const SignIn = () => {
                 <div id={!registered && "active"} onClick={toggleRegister}>Register</div>
             </span>
             {registered ? <Login /> : <Register />}
-            {registered ? <p onClick={toggleRegister}>Not yet a user? Register here</p> :
-            <p onClick={toggleRegister}>Already registered? Login here</p>}
+            {/* {registered ? <p onClick={toggleRegister}>Not yet a user? Register here</p> :
+            <p onClick={toggleRegister}>Already registered? Login here</p>} */}
         </div>
     )
 }
