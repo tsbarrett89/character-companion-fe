@@ -4,6 +4,10 @@ import {
     FETCH_CHARACTERS_FAILURE
 } from '../actions/users'
 
+import {
+    LOGOUT
+} from '../actions/auth'
+
 const initialState = {
     characters: [],
     isLoading: false,
@@ -29,6 +33,8 @@ const reducer = (state = initialState, action) => {
                 isLoading: false,
                 error: action.payload
             })
+        case LOGOUT:
+            return initialState
     }
     return state
 }
