@@ -11,7 +11,9 @@ const Header = () => {
 
     return (
         <header>
-            <h1>Character Companion</h1>
+            <div>
+                <h1>Character Companion</h1>
+            </div>
             {username ? <NavDropDown /> : <SignInButton />}
         </header>
     )
