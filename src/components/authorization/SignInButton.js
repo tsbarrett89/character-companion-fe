@@ -1,9 +1,9 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const SignInButton = () => {
     return (
-        <NavLink to='/login'>Sign In / Register</NavLink>
+        <Link to='/login'>Sign In / Register</Link>
     )
 }
 
