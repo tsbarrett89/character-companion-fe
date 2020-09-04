@@ -54,8 +54,7 @@ const reducer = (state = initialState, action) => {
                 error: action.payload
             })
         case LOGOUT:
-            console.log('logout')
-            return (initialState)
+            return initialState
     }
     return state
 }
