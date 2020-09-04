@@ -1,0 +1,35 @@
+.navDropDown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navDrop{
+    display: flex;
+    justify-content: space-between;
+
+    img{
+        margin-left: 20px;
+        width: 10px;
+        height: 10px;
+        transform: translateY(50%)
+    }
+}
+
+.dropDown {
+        position: absolute;
+        top: 55px;
+        width: 100px;
+        background-color: #525252;
+        border-radius: 12px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+}
