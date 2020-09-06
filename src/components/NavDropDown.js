@@ -12,14 +12,16 @@ const NavDropDown = () => {
 
     return (
         <div className="navDropDown">
-            <span className="navDrop">
-                <h3>{username}</h3>
-                <img src={downWhite} alt="open nav drop down menu"
-                     onClick={() => setHidden(!hidden)}
-                />
-            </span>
+            <h3
+                onMouseEnter={() => setHidden(false)}
+                onMouseLeave={() => setHidden(true)}
+            >{username}</h3>
             {!hidden &&
-                <ul className="dropDown">
+                <ul 
+                    className="dropDown"
+                    onMouseEnter={() => setHidden(false)}
+                    onMouseLeave={() => setHidden(true)}
+                >
                     <LogOutButton />
                 </ul>
             }
